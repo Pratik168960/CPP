@@ -16,4 +16,13 @@ int main (){
 // for (initialisation; condition; updation inc/dec)
 // Initialization (once) → Condition Check → Execute Body → 
 // Update → Repeat from Condition Check (until false).
+
+// ******** JUMP STATEMENTS / CONTROL FLOW STATEMENTS ********
+// **** BREAK ****
+// break -> instantly stops and exits the entire loop, 
+// moving on to the code outside of it
+
+// **** CONTINUE ****
+// continue -> skips the rest of the current loop iteration 
+// and immediately jumps to the next one
 }
