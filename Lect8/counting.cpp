@@ -4,8 +4,10 @@
 using namespace std;
 
 // We use 'void' because this function does not return any data to main()
+// function signature 
 void printCounting(int n) {
     
+    // function body 
     for (int i = 1; i <= n; i++) {
         cout << i << " ";
     }
