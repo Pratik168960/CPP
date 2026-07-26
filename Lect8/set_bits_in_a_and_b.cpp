@@ -34,3 +34,9 @@ int main(){
     cout << "Total set bits in a and b is " << result << endl;
     return 0;
 }
+
+
+// output 
+// Enter a value of a : 2
+// Enter a value of b : 3
+// Total set bits in a and b is 3
