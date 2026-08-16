@@ -1,30 +1,30 @@
 /*
- * 
- * LECTURE 11: TIME AND SPACE COMPLEXITY
- * 
- *
- * WHAT IS TIME COMPLEXITY?
- * - It is not the actual execution time in seconds.
- * - It is a mathematical function that describes how the number of operations 
- * grows as the input size (N) increases.
- * - We use Big-O Notation to represent the worst-case scenario.
- *
- * WHAT IS SPACE COMPLEXITY?
- * - The amount of extra memory an algorithm takes to execute as a function of 
- * the input size (N).
- *
- * HOW TO AVOID TLE (Time Limit Exceeded):
- * - Most modern online judges (LeetCode, CodeStudio) allow ~10^8 operations per second.
- * - If N = 10^5, an O(N) solution takes 10^5 ops (Passes instantly).
- * - If N = 10^5, an O(N^2) solution takes 10^10 ops (Takes ~100s -> TLE!).
- * * COMMON BIG-O COMPLEXITIES (From Best to Worst):
- * 1. O(1)         - Constant Time
- * 2. O(log N)  - Logarithmic Time (Binary Search)
- * 3. O(N)       - Linear Time (Single Loop)
- * 4. O(N log N)- Linearithmic Time (Merge/Quick Sort)
- * 5. O(N^2)    - Quadratic Time (Nested Loops)
- * 6. O(2^N)    - Exponential Time (Recursion/Subsets)
- * 7. O(N!)     - Factorial Time (Permutations)
+
+        LECTURE 11: TIME AND SPACE COMPLEXITY
+
+
+WHAT IS TIME COMPLEXITY?
+- It is not the actual execution time in seconds.
+- It is a mathematical function that describes how the number of operations 
+grows as the input size (N) increases.
+- We use Big-O Notation to represent the worst-case scenario.
+
+WHAT IS SPACE COMPLEXITY?
+- The amount of extra memory an algorithm takes to execute as a function of 
+the input size (N).
+
+HOW TO AVOID TLE (Time Limit Exceeded):
+- Most modern online judges (LeetCode, CodeStudio) allow ~10^8 operations per second.
+- If N = 10^5, an O(N) solution takes 10^5 ops (Passes instantly).
+- If N = 10^5, an O(N^2) solution takes 10^10 ops (Takes ~100s -> TLE!).
+* COMMON BIG-O COMPLEXITIES (From Best to Worst):
+1. O(1)         - Constant Time
+2. O(log N)  - Logarithmic Time (Binary Search)
+3. O(N)       - Linear Time (Single Loop)
+4. O(N log N)- Linearithmic Time (Merge/Quick Sort)
+5. O(N^2)    - Quadratic Time (Nested Loops)
+6. O(2^N)    - Exponential Time (Recursion/Subsets)
+7. O(N!)     - Factorial Time (Permutations)
  */
 
 #include <iostream>
