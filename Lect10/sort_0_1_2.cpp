@@ -1,6 +1,6 @@
 /*
 
-        LECTURE 10: SORT 0, 1, AND 2 (Dutch National Flag)
+        LECTURE 10: SORT 0, 1, AND 2 
 
 
 GOAL:
