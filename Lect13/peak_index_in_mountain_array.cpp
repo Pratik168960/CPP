@@ -66,7 +66,7 @@ int main() {
 }
 
 /*
-EXPECTED CONSOLE OUTPUT:
+OUTPUT:
 Mountain Array: 0 2 5 10 8 3 1
 
 The peak element is at index: 3
