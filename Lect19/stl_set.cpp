@@ -75,7 +75,7 @@ int main() {
 }
 
 /*
-EXPECTED CONSOLE OUTPUT:
+OUTPUT:
 --- 1. INSERTION (UNIQUE & SORTED) ---
 Elements in Set: 0 1 5 6 
 
