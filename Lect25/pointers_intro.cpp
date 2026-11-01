@@ -14,6 +14,12 @@ THE APPROACH:
 - Copy 'ptr' into a new pointer 'q' to prove they both point to 
   the same physical memory block.
 
+POINTER ARITHMETIC NOTE:
+- If you declare `int i = 3` and its memory address is 100, and you point 
+  to it using `int *t = &i`, executing `t = t + 1` will NOT result in address 101. 
+  It will jump to address 104 because an integer data type takes exactly 4 bytes 
+  of memory. The pointer scales by the size of its data type.
+
 COMPLEXITY:
 - Time Complexity: O(1) for all pointer creations and accesses.
 - Space Complexity: O(1) auxiliary space (usually 8 bytes to store a pointer 
@@ -29,53 +35,38 @@ int main() {
     
     cout << "--- THE ORIGINAL VARIABLE ---" << endl;
     cout << "Value of num: " << num << endl;
-    cout << "Address of num in memory: " << &num << endl; // Prints memory address
+    cout << "Address of num in memory: " << &num << endl;
 
     // Create a pointer to store the address of num
     int *ptr = &num; 
 
     cout << "\n--- THE POINTER ---" << endl;
     cout << "Address stored inside ptr: " << ptr << endl;
-    // Dereferencing the pointer to get the value 
-    // * is a dereference operator
+    // Dereferencing the pointer to get the value (* is a dereference operator)
     cout << "Value at the address ptr is pointing to (*ptr): " << *ptr << endl;
 
     // Modifying the value using the pointer
-    *ptr = *ptr + 1; // Increment the value at the address
+    *ptr = *ptr + 1; 
     cout << "\n--- AFTER MODIFICATION ---" << endl;
     cout << "New value of num: " << num << endl;
 
     // Copying a pointer
-    int *q = ptr; // 'q' now holds the exact same address as 'ptr'
+    int *q = ptr; 
 
     cout << "\n--- COPYING A POINTER ---" << endl;
     cout << "Address stored in q: " << q << endl;
     cout << "Value at *q: " << *q << endl;
-
-    // VERY BAD PRACTICE: Uninitialized/Wild Pointer
-    // int *badPtr; // Points to random garbage memory
-    // *badPtr = 10; // DANGEROUS: Modifies unknown memory
     
+    // --- POINTER ARITHMETIC DEMONSTRATION ---
+    int i = 3;
+    int *t = &i;
+    cout << "\n--- POINTER ARITHMETIC ---" << endl;
+    cout << "Original address of i stored in t: " << t << endl;
+    t = t + 1; 
+    cout << "Address after (t = t + 1): " << t << " (Jumped by exactly 4 bytes)" << endl;
+
     // SAFE PRACTICE: Null Pointer
     int *safePtr = 0; // Initialize to 0 if no address is available
 
     return 0;
 }
-
-/*
-OUTPUT (Addresses will vary on your machine):
---- THE ORIGINAL VARIABLE ---
-Value of num: 5
-Address of num in memory: 0x7ffee4b5c9ac
-
---- THE POINTER ---
-Address stored inside ptr: 0x7ffee4b5c9ac
-Value at the address ptr is pointing to (*ptr): 5
-
---- AFTER MODIFICATION ---
-New value of num: 6
-
---- COPYING A POINTER ---
-Address stored in q: 0x7ffee4b5c9ac
-Value at *q: 6
-*/
