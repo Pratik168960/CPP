@@ -2,7 +2,6 @@
 
 LECTURE 26: POINTERS IN C++ (PART-2) - POINTERS WITH FUNCTIONS
 
-
 THE GOAL:
 - Understand how pointers and memory addresses are passed to functions.
 - Learn the difference between updating a local pointer copy vs dereferenced value.
